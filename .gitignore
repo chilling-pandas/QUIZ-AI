@@ -1,0 +1,12 @@
+# Python
+venv/
+.env
+__pycache__/
+*.pyc
+
+# ML / Torch
+*.pt
+*.pth
+
+# OS
+.DS_Store

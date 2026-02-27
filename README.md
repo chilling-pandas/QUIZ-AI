@@ -11,6 +11,24 @@ An intelligent quiz generation system that uses AI to create multiple-choice que
 - **Interactive UI**: User-friendly Streamlit-based frontend
 - **FastAPI Backend**: Scalable REST API backend
 
+## 🧠 System Architecture
+
+RAGnosis is designed using a Retrieval-Augmented Generation (RAG) pipeline
+that separates document ingestion, semantic retrieval, and quiz generation.
+
+### Architecture Flow
+
+1. User uploads study material via Streamlit UI
+2. FastAPI backend extracts and chunks text
+3. SentenceTransformer generates embeddings
+4. FAISS stores semantic vectors
+5. Relevant context retrieved using similarity search
+6. Difficulty-aware prompt sent to Local LLM (Ollama)
+7. Structured quiz returned to frontend
+8. Answers validated and scored in session state
+
+![System Architecture](docs/system-architecture.png)
+
 ## Project Structure
 
 ```
